@@ -30,9 +30,9 @@ function PhoneLoginScreen({ onLoggedIn }) {
 
   const toE164 = (raw) => {
     const digits = raw.replace(/\D/g, "");
-    if (digits.startsWith("880")) return `+${digits}`;
-    if (digits.startsWith("0")) return `+880${digits.slice(1)}`;
-    return `+880${digits}`;
+    if (digits.startsWith("91")) return `+${digits}`;
+    if (digits.startsWith("0")) return `+91${digits.slice(1)}`;
+    return `+91${digits}`;
   };
 
   const sendCode = async () => {
