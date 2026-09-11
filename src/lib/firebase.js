@@ -47,8 +47,8 @@ export function setupRecaptcha(containerId) {
 }
 
 /**
- * ফোন নম্বরে OTP কোড পাঠায়। number অবশ্যই +880 সহ পূর্ণ ফরম্যাটে দিতে হবে
- * (যেমন +8801XXXXXXXXX)। রিটার্ন করে একটা confirmationResult, যেটা দিয়ে
+ * ফোন নম্বরে OTP কোড পাঠায়। number অবশ্যই +91 সহ পূর্ণ ফরম্যাটে দিতে হবে
+ * (যেমন +91XXXXXXXXX)। রিটার্ন করে একটা confirmationResult, যেটা দিয়ে
  * পরের ধাপে কোড যাচাই করা হয়।
  */
 export async function sendOtp(phoneNumber, containerId) {
