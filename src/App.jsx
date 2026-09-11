@@ -91,7 +91,7 @@ function PhoneLoginScreen({ onLoggedIn }) {
           <>
             <div className="flex items-center gap-2 border rounded-xl px-3 py-3 mb-3 bg-white">
               <Phone size={16} className="text-gray-400" />
-              <span className="text-[14px] text-gray-500">+880</span>
+              <span className="text-[14px] text-gray-500">+91</span>
               <input
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
