@@ -1,0 +1,26 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // প্রতিটা ব্যবহারকারী শুধু নিজের প্রোফাইল পড়তে/লিখতে পারবে
+    match /profiles/{uid} {
+      allow read, write: if request.auth != null && request.auth.uid == uid;
+    }
+
+    // যেকোনো লগইন করা ব্যবহারকারী সব পণ্য দেখতে পারবে,
+    // কিন্তু নিজের নামে (ownerId) ছাড়া নতুন পণ্য যোগ করতে পারবে না
+    match /products/{productId} {
+      allow read: if request.auth != null;
+      allow create: if request.auth != null && request.resource.data.ownerId == request.auth.uid;
+      allow update, delete: if request.auth != null && resource.data.ownerId == request.auth.uid;
+    }
+
+    // অর্ডার — সবাই দেখতে পারবে (যাতে পাইকারি তার পণ্যের অর্ডার দেখতে পায়),
+    // কিন্তু শুধু নিজের নামে (buyerId) নতুন অর্ডার বসাতে পারবে
+    match /orders/{orderId} {
+      allow read: if request.auth != null;
+      allow create: if request.auth != null && request.resource.data.buyerId == request.auth.uid;
+      allow update: if request.auth != null;
+    }
+  }
+}

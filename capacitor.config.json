@@ -1,0 +1,8 @@
+{
+  "appId": "com.bazarlink.app",
+  "appName": "বাজারলিংক",
+  "webDir": "dist",
+  "server": {
+    "androidScheme": "https"
+  }
+}
