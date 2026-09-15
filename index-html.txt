@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="bn">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <meta name="theme-color" content="#E8622C" />
+    <meta name="description" content="পাইকারি ও দোকানদারদের মধ্যে সরাসরি কেনাবেচার অ্যাপ" />
+
+    <!-- PWA: Add to Home Screen সাপোর্ট -->
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="icon" href="/icon-192.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Market Shope" />
+    <meta name="mobile-web-app-capable" content="yes" />
+
+    <title>Market Shope</title>
+
+    <!-- Google AdSense: বিজ্ঞাপন দেখিয়ে আয় করার জন্য।
+         নিজের ক্লায়েন্ট আইডি (ca-pub-...) .env ফাইলে VITE_ADSENSE_CLIENT_ID
+         হিসেবে বসালে এখানে স্বয়ংক্রিয়ভাবে বসে যাবে। AdSense অ্যাকাউন্ট
+         অনুমোদন না হওয়া পর্যন্ত এই স্ক্রিপ্ট নিরাপদে চুপচাপ কিছু করবে না। -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=%VITE_ADSENSE_CLIENT_ID%" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
+
